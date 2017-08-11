@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import ReactDOM from "react-dom";
-import Head from './src/Head';
+import Head from './src/Header';
 
 ReactDOM.render(
     <Head/>,
