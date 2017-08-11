@@ -1,6 +1,7 @@
 /**
  * Created by lmy on 17-8-10.
  */
+const path = require('path');
 module.exports = {
     entry: "./entry.jsx", // 要打包的入口文件
     output: {               //打包后的文件
@@ -20,5 +21,11 @@ module.exports = {
                 }
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            'meao': path.resolve(__dirname, 'src')
+        }
     }
 };
