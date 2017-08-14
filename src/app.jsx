@@ -23,18 +23,21 @@ class App extends React.Component {
 
     changeTodoState(index, isDone) {
         this.state.todos[index].isDone = isDone;
+        this.setState({
+            todos: todos
+        });
     }
 
     deleteTodo(index) {
-        this.state.todos.splice(index, 1)
-        this.setState({todos: this.state.todos})
+        this.state.todos.splice(index, 1);
+        this.setState({todos: this.state.todos});
     }
 
     clearDone() {
         let todos = this.state.todos.filter((todo) => !todo.isDone);
         this.setState({
             todos: todos
-        })
+        });
     }
 
     render() {

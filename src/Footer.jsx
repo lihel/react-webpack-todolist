@@ -12,11 +12,11 @@ class TodoFooter extends React.Component {
         let minus = this.props.todoCount - this.props.todoDoneCount;
         return (
             <div className="todo-footer">
-                <span className="item-left">{minus}item left</span>
+                <span className="item-left">{minus} item left</span>
                 <Button>all</Button>
-                <Button type="danger" onClick={this.deleteAll.bind(this)}>clear completed</Button>
+                <Button onClick={this.deleteAll.bind(this)}>clear completed</Button>
             </div>
-        )
+        );
     }
 }
 
