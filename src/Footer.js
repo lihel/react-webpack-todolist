@@ -1,8 +1,9 @@
 /**
  * Created by lmy on 17-8-11.
  */
-import React from 'react'
-import {Button} from 'antd'
+import React from 'react';
+import {Button} from 'antd';
+
 class TodoFooter extends React.Component {
     deleteAll() {
         this.props.clearDone();
@@ -12,8 +13,9 @@ class TodoFooter extends React.Component {
         this.props.showAll();
     }
 
-    showActive(){
-        this.props.showleft();
+    showActive() {
+
+
     }
 
     render() {
@@ -21,7 +23,7 @@ class TodoFooter extends React.Component {
         return (
             < div className="todo-footer">
                 < span className="item-left"> {minus} item left </span >
-                < Button onClick={this.all.bind(this)}>all </Button >
+                < Button onClick={this.all.bind(this)}>all</Button >
                 < Button onClick={this.showActive.bind(this)}> Active </Button >
                 < Button > Completed</Button >
                 < Button onClick={this.deleteAll.bind(this)}>clear completed </Button >
@@ -31,3 +33,4 @@ class TodoFooter extends React.Component {
 }
 
 export default TodoFooter
+

@@ -10,7 +10,7 @@ import Footer from './Footer';
 
 class App extends React.Component {
     constructor() {
-        super()
+        super();
         this.state = {
             todos: []
         }
@@ -48,13 +48,6 @@ class App extends React.Component {
         });
     }
 
-    showleft() {
-        // let todos = this.state.todos.filter((todo) => !todo.isDone);
-        // this.setState({
-        //     todos: todos
-        // });
-    }
-
     render() {
         let info = {
             todoCount: this.state.todos.length || 0,
@@ -64,10 +57,10 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <Input addTodo={this.addTodo.bind(this)}/>
-                <Main todos={this.state.todos} changeTodoState={this.changeTodoState.bind(this)}
+                <Main left={this.state.left} todos={this.state.todos} changeTodoState={this.changeTodoState.bind(this)}
                       deleteTodo={this.deleteTodo.bind(this)}/>
                 <Footer {...info} clearDone={this.clearDone.bind(this)} showAll={this.showAll.bind(this)}
-                        showleft={this.showleft.bind(this)}/>
+                       />
             </div>
         )
     }
